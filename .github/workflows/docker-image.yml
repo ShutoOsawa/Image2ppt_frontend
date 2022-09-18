@@ -19,4 +19,5 @@ jobs:
         docker-compose up -d
         docker-compose exec app bash
         npm install
+        npx vitest run
         
