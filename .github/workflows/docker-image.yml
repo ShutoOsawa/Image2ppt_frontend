@@ -19,8 +19,9 @@ jobs:
     - name: Up Docker
       run: docker-compose up -d
     - name: Bash
-      run: docker-compose exec -T app bash
-    - name: run test
-      run: npm run serve
+      run: |
+        docker-compose exec -T app bash
+        ls
+
       
         
