@@ -26,7 +26,7 @@ jobs:
       run: |
         cd app
         npm install
-    - name: run test
-      run: npx vitest run
+        npx vitest run
+
       
         
