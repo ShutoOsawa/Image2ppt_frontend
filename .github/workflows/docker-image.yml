@@ -20,6 +20,8 @@ jobs:
       run: docker-compose up -d
     - name: Bash
       run: docker-compose exec -T app bash
+    - name: install
+      run: npm install
     - name: run test
       run: npx vitest run
       
