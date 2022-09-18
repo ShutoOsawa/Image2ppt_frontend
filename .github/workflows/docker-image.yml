@@ -15,9 +15,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: |
-        docker-compose up -d
-        docker-compose exec app bash
-        npm install
-        npx vitest run
+      run: docker-compose build
+    - name: Up Docker
+      run: docker-compose up -d
+    - name: Bash
+      run: docker-compose exec app bash
+      
         
