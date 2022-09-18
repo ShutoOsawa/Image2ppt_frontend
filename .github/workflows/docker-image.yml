@@ -19,6 +19,8 @@ jobs:
     - name: Up Docker
       run: docker-compose up -d
     - name: Bash
-      run: docker-compose exec app bash
+      run: docker-compose exec -T app bash
+    - name: run test
+      run: npx vitest run
       
         
